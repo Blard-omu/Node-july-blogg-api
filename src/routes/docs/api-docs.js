@@ -20,11 +20,11 @@ const apiDocumentation = {
   },
   servers: [
     {
-      url: 'http://localhost:8081/api/v1',
+      url: 'https://node-july-api.onrender.com/',
       description: 'Local Server',
     },
     {
-      url: 'https://api.mysite.com',
+      url: 'https://node-july-api.onrender.com/',
       description: 'Production Server',
     },
   ],
