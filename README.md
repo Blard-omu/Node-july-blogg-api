@@ -48,21 +48,21 @@ Base URL: `http://localhost:8080/api/v1`
 
 
 
-#### 2. **Get All Users**
+#### 3. **Get All Users**
 
 - **Endpoint**: `/users`
 - **HTTP Method**: GET
 - **Description**: Retrieve a list of all users.
 - **Response**: Users retrieved successfully.
 
-#### 3. **Get User by ID**
+#### 4. **Get User by ID**
 
 - **Endpoint**: `/users/{user_id}`
 - **HTTP Method**: GET
 - **Description**: Retrieve a specific user by their unique `_id`.
 - **Response**: User object.
 
-#### 4. **Update User**
+#### 5. **Update User**
 
 - **Endpoint**: `/users/{user_id}`
 - **HTTP Method**: PUT
@@ -70,7 +70,7 @@ Base URL: `http://localhost:8080/api/v1`
 - **Request Body**: Updated user data.
 - **Response**: Success message and updated user details.
 
-#### 5. **Delete User**
+#### 6. **Delete User**
 
 - **Endpoint**: `/users/{user_id}`
 - **HTTP Method**: DELETE
@@ -131,6 +131,6 @@ User authentication is required for certain endpoints. These endpoints will retu
 
 To test the API and explore its functionality, you can use tools like Postman or any API testing tool of your choice.
 
-## Conclusion
+===
 
-This documentation should serve as a guide to the "node-api," enabling developers to interact with and utilize its endpoints for user and blog management.
+I Blard. a Fullstack Developer and tech instructor at Techstudio academy Lagos.
