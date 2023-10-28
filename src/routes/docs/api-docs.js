@@ -52,13 +52,13 @@ const apiDocumentation = {
       get: getUser,
       patch: updateUser,
     },
-    'blogs/create': {
+    '/blogs/create': {
       post: createBlog,
     },
-    'blogs/all': {
+    '/blogs/all': {
       get: getBlogs,
     },
-    'blog/_id': {
+    '/blog/_id': {
       delete: deleteBlog,
       get: getBlog,
       put: updateBlog,
