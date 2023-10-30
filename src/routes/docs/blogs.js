@@ -89,18 +89,23 @@ const security = [
 const createOrUpdateBlogBody = {
   type: 'object',
   properties: {
-    Blogname: {
+    title: {
       type: 'string',
-      example: 'John Snow',
+      example: 'The title of the blog',
     },
-    email: {
+    content: {
       type: 'string',
-      example: 'john.snow@email.com',
+      example: 'This ia awesome blog',
     },
-    password: {
+    author: {
       type: 'string',
-      description: "unencrypted Blog's password",
-      example: '!1234aWe1Ro3$#',
+      description: "This is populated with 'username'",
+      example: 'blard',
+    },
+    image: {
+      type: 'string',
+      description: "choose an image (jpeg, jpg, png) to upload'",
+      example: 'images/img_upload.jpg',
     },
   },
 };
@@ -108,9 +113,9 @@ const createOrUpdateBlogBody = {
 const updateBlogBody = {
   type: 'object',
   properties: {
-    Blogname: {
+    title: {
       type: 'string',
-      example: 'John Snow',
+      example: 'This is the title of the',
     },
   },
 };
@@ -146,17 +151,21 @@ const createBlog = {
                 type: 'string',
                 example: '60564fcb544047cdc3844818',
               },
-              Blogname: {
+              title: {
                 type: 'string',
-                example: 'John Snow',
+                example: 'Blog post one',
               },
-              email: {
+              content: {
                 type: 'string',
-                example: 'john.snow@email.com',
+                example: 'This is a very nice post',
               },
-              password: {
+              author: {
                 type: 'string',
-                example: '442893aba778ab321dc151d9b1ad98c64ed56c07f8cbaed',
+                example: 'blard',
+              },
+              image: {
+                type: 'file',
+                example: 'images/img_one.jpg',
               },
               
               createdAt: {
