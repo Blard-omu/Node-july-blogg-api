@@ -37,14 +37,30 @@ const createBlog = async (req, res) => {
 };
 
 // Get all blog posts
+// ... (previous imports and configurations)
+
 const getAllBlogs = async (req, res) => {
+  const page = parseInt(req.query.skip) || 0;
+  const limit = parseInt(req.query.limit) || 6; // Set the default limit as 3 if not specified
+
   try {
-    const blogs = await Blog.find().populate('author', 'username');
-    res.json(blogs);
+    const totalPosts = await Blog.countDocuments();
+    const blogs = await Blog.find()
+      .sort({ createdAt: -1 })
+      .skip(page) // Apply the skip based on the skip parameter
+      .limit(limit)
+      .populate('author', 'username');
+
+    res.json({
+      totalPages: Math.ceil(totalPosts / limit),
+      currentPage: Math.floor(page / limit) + 1,
+      blogs
+    });
   } catch (error) {
     res.status(500).json({ message: 'Failed to fetch blogs', error: error.message });
   }
 };
+
 
 // Get a specific blog post by ID
 const getBlogById = async (req, res) => {

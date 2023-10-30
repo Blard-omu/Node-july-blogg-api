@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
 );
 
 // Define a method to check the user's password
-userSchema.methods.checkPassword = async function (password) {
+userSchema.methods.comparePassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
